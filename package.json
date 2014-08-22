@@ -1,0 +1,6 @@
+{
+  "name": "ニコレポ整理くん",
+  "main": "index.html",
+  "version": "1.0",
+  "window": {"toolbar": false}
+}

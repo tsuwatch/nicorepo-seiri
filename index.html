@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>ニコレポ整理くん</title>
+	<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/lumen/bootstrap.min.css" rel="stylesheet">
+	<link href="main.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/tristen/tablesort/gh-pages/tablesort.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>ニコレポ整理くん</h1>
+		<p id="msg"><p>あなたのお気に入りユーザーの最新ニコレポ時刻を調べます。</p><a href="#" id="start" class="btn btn-default">調べる！</a ></p>
+		<table class="table table-striped table-hover" id="sortable">
+			 <thead><tr class="no-sort"><th>順番</th><th>ユーザー名</th><th>最新ニコレポ時刻</th></tr></thead>
+			 <tbody id="tbl"></tbody>
+		</table>
+	</div>
+</body>
+<script>new Tablesort(document.getElementById("sortable"));</script>
