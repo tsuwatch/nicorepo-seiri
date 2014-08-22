@@ -51,7 +51,7 @@ function getUser(id, name) {
 			var d = 0;
 			var dt = '<span class="none">なし</span>';
 		}
-		$("#tbl").append('<tr><td data-value="' + num + '">' + num + '</td><td><a href="' + url + '" target="_blank">' + name + '</a></td><td data-value="' + d + '">' + dt + '</td></tr>');
+		$("#tbl").append('<tr><td>' + num + '</td><td><a href="' + url + '" target="_blank">' + name + '</a></td><td data-sort="' + d + '">' + dt + '</td></tr>');
 		num++;
 	});
 }
