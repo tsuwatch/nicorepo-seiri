@@ -10,7 +10,13 @@ function getMyFav(page) {
 	if (page == 1) {
 		$("#msg").html('<p id="login_check">ログインチェック中…<br><progress></progress></p>');
 	}
-	$.get("http://www.nicovideo.jp/my/fav/user?page=" + page, function(html) {
+	$.ajax({
+		type: 'GET',
+		url: 'http://www.nicovideo.jp/my/fav/user?page=' + page,
+		headers: {
+			'accept-language': 'ja, ja-JP'
+		}
+	}).done(function(html) {
 		if (html.indexOf('<title>ニコニコ動画　ログインフォーム</title>') == -1) {
 			$("table").show();
 			$("#start").remove();
